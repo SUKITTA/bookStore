@@ -11,6 +11,7 @@ public class Main {
         BookDao bookDao = context.getBean("bookDaoImp", BookDao.class);
 
         // ---- insert book ----
+        bookDao.deleteById(4);
         Book newBook = new Book(4, "Basic of Spring Framework", 556);
         bookDao.save(newBook);
 
